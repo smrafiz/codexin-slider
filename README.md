@@ -1,6 +1,8 @@
 # Codexin Slider
 A Simple WordPress Slider Plugin. Uses [Swiper Slider](https://swiperjs.com/). Tested in official Twenty Twenty theme. Intended for home page showcase slider.
 
+##[Download Page](/releases)
+
 ### Features:
 * Background Parallax when sliding.
 * Text layer animation.
