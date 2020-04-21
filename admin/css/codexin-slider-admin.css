@@ -1,0 +1,179 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+/***********************
+ Metabox
+***********************/
+.codexin-slider-metabox {
+    padding: 30px 20px 25px;
+}
+
+.codexin-slider-metabox:not(:last-of-type) {
+    margin: 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.codexin-slider-metabox>label {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.codexin-slider-metabox>label .title-desc {
+    width: 30%;
+}
+
+.codexin-slider-metabox>label .title-desc span {
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+.wp-admin .codexin-slider-metabox label input[type="checkbox"] {
+    margin: 0 10px 0 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.codexin-slider-metabox input[type="text"],
+.codexin-slider-metabox textarea {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.codexin-slider-metabox input[type="text"] {
+    height: 35px;
+}
+
+.codexin-slider-metabox textarea {
+    height: 150px;
+}
+
+.codexin-slider-metabox select {
+    cursor: pointer;
+    height: 35px;
+    width: 400px;
+    max-width: 100%;
+    border-radius: 0;
+}
+
+.wp-admin .codexin-slider-metabox label input[type="checkbox"]:not(:focus),
+.codexin-slider-metabox input[type="text"]:not(:focus),
+.codexin-slider-metabox textarea:not(:focus),
+.codexin-slider-metabox select:not(:focus) {
+    border-color: #c8c8c8;
+}
+
+/***********************
+ Admin Menu
+***********************/
+#codexin_slider_settings_page>h1 {
+    padding: 10px 20px;
+    background: #fff;
+    border-left: 3px solid #007cba;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#codexin_slider_settings_page form h2 {
+    font-size: 1.4em;
+    margin-top: 25px;
+}
+
+#codexin_slider_settings_page input[type="text"],
+#codexin_slider_settings_page select {
+    max-width: 100%;
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#codexin_slider_settings_page input[type="text"]:not(.cx-color-picker),
+#codexin_slider_settings_page select {
+    width: 400px;
+    height: 35px;
+}
+
+#codexin_slider_settings_page .button.wp-color-result,
+#codexin_slider_settings_page .wp-color-result-text,
+#codexin_slider_settings_page .wp-picker-clear {
+    border-radius: 0;
+}
+
+#codexin_slider_settings_page .wp-picker-clear {
+    min-height: 30px;
+    margin-left: 6px;
+}
+
+.codexin-slider-metabox.toggle-switch .switch,
+#codexin_slider_settings_page .switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 26px;
+}
+
+.codexin-slider-metabox.toggle-switch .switch input,
+#codexin_slider_settings_page .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.codexin-slider-metabox.toggle-switch .slider,
+#codexin_slider_settings_page .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.codexin-slider-metabox.toggle-switch .slider:before,
+#codexin_slider_settings_page .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+#codexin_slider_settings_page input:checked+.slider {
+    background-color: #007cba;
+}
+
+.codexin-slider-metabox.toggle-switch input:checked+.slider {
+    background-color: #dc3232;
+}
+
+.codexin-slider-metabox.toggle-switch input:checked+.slider:before,
+#codexin_slider_settings_page input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.codexin-slider-metabox.toggle-switch .slider.round,
+#codexin_slider_settings_page .slider.round {
+    border-radius: 24px;
+}
+
+.codexin-slider-metabox.toggle-switch .slider.round:before,
+#codexin_slider_settings_page .slider.round:before {
+    border-radius: 50%;
+}
