@@ -320,7 +320,7 @@ class Codexin_Slider_Settings {
             '<input type="text" class="regular-text" id="extra_class" name="codexin_slider_settings[extra_class]" value="%s" />',
             isset( $this->settings['extra_class'] ) ? esc_attr( $this->settings['extra_class'] ) : ''
         );
-        printf( '<p><span class="description">%s</span></p>', esc_html__( 'Enter extra CSS class if needed.', 'codexin' ) );
+        printf( '<p><span class="description">%s</span></p>', esc_html__( 'Enter extra wrapper CSS class if needed.', 'codexin' ) );
 	}
 
 	public function font_callback() {

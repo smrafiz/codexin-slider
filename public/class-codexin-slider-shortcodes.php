@@ -72,6 +72,7 @@ class Codexin_slider_Shortcodes {
 							$btn_link = get_post_meta( get_the_ID(), 'cx_slider_button_link', true);
 							$btn_text = get_post_meta( get_the_ID(), 'cx_slider_button_text', true);
 							$content_animation = get_post_meta( get_the_ID(), 'cx_slider_animation', true);
+							$content_class = get_post_meta( get_the_ID(), 'cx_slider_class', true);
 							$anim_class = '';
 
 							switch( $content_animation ) {
@@ -101,7 +102,7 @@ class Codexin_slider_Shortcodes {
 							}
 
 							?>
-								<div class="swiper-slide bg-img-wrapper">
+								<div class="swiper-slide bg-img-wrapper<?php echo ! empty( $content_class ) ? ' ' . esc_attr( $content_class ) : ''; ?>">
 									<div class="slide-inner image-placeholder pos-r">
 										<img src="<?php echo get_the_post_thumbnail_url( get_the_ID(),'full'); ?>" class="visually-hidden" alt="Slider Image">
 										<div class="container">

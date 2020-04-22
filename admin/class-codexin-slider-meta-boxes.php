@@ -25,6 +25,7 @@ class Codexin_Slider_Meta_Boxes {
 		$button_text = get_post_meta($post->ID, 'cx_slider_button_text', true);
 		$button_link = get_post_meta($post->ID, 'cx_slider_button_link', true);
 		$content_animation = get_post_meta($post->ID, 'cx_slider_animation', true);
+		$content_class = get_post_meta($post->ID, 'cx_slider_class', true);
 
 		$html = '';
 		ob_start();
@@ -116,6 +117,20 @@ class Codexin_Slider_Meta_Boxes {
 			</label>
 		</div>
 
+		<div class="codexin-slider-metabox">
+			<label>
+				<div class="title-desc">
+					<span>Slide CSS Class</span>
+					<p class="description">Enter Slide CSS Class</p>
+				</div>
+				<div class="inputs">
+					<input type="text" name="cx_slider_class" value="<?php echo esc_attr( $content_class ) ?>" />
+					<p class="description">You can enter custom class here for this slide only.</p>
+				</div>
+
+			</label>
+		</div>
+
 
 		<?php
 
@@ -141,10 +156,11 @@ class Codexin_Slider_Meta_Boxes {
 			// Slide Settings.
 			'cx_slider_title'	  	=> wp_kses_post( $_POST['cx_slider_title'] ),
 			'cx_slider_subtitle'  	=> wp_kses_post( $_POST['cx_slider_subtitle'] ),
-			'cx_slider_show_toggle'  	=> $_POST['cx_slider_show_toggle'],
+			'cx_slider_show_toggle' => $_POST['cx_slider_show_toggle'],
 			'cx_slider_button_text' => sanitize_text_field( $_POST['cx_slider_button_text'] ),
 			'cx_slider_button_link' => esc_url_raw( $_POST['cx_slider_button_link'] ),
 			'cx_slider_animation'  	=> sanitize_text_field( $_POST['cx_slider_animation'] ),
+			'cx_slider_class'  		=> sanitize_text_field( $_POST['cx_slider_class'] ),
 		);
 
 		foreach( $metas_to_be_saved as $meta_key => $meta_value ) {
