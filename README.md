@@ -22,7 +22,7 @@ A Simple WordPress Slider Plugin. Uses [Swiper Slider](https://swiperjs.com/). T
 * Optimization - Optimize metabox class.
 * Optimization - Optimize settings class.
 * Optimization - Properly configure uninstall.php to handle database clean up.
-* Fix - Translatable strings.
+* Fix - Translatable strings throughout the plugin.
 
 
 #### Changelog:
